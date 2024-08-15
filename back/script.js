@@ -30,9 +30,7 @@ function mostrarTarefas() {
             </li>
             `
     })
-    if (input=''){
-        alert ("É necessario adicionar uma tarefa")
-    }
+    
     listaCompleta.innerHTML = novaLi
     localStorage.setItem('lista', JSON.stringify(minhaListadeItens))
 }
@@ -56,8 +54,8 @@ function deletarItem(index) {
 function recarregarTarefas() {
     const tarefasLocalStorage = localStorage.getItem('lista')
 
-    if(tarefasLocalStorage){
-    minhaListadeItens = JSON.parse(tarefasLocalStorage)
+    if (tarefasLocalStorage) {
+        minhaListadeItens = JSON.parse(tarefasLocalStorage)
     }
 
     mostrarTarefas()
